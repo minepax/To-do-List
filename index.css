@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a0120;
+    padding: 5rem;
+}
+
+.todo-app {
+    width: 700px;
+    max-width: 100%;
+    background-color: #290333;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.heading {
+    font-family: inherit;
+    font-weight: 800;
+    font-size: 5rem;
+    color: #fcf9c6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 2rem 0;
+}
+
+.input-area {
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #6e1586;
+    padding: 0;
+    gap: 1rem;
+}
+
+textarea {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #fcf9c6;
+    resize: none;
+    field-sizing: content;
+    max-height: 15rem;
+}
+
+textarea::placeholder {
+    color: #1a0120;
+}
+
+button {
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    color: #1a0120;
+    background-color: #fcf9c6;
+    cursor: pointer;
+}
+
+ul {
+    margin: 2rem;
+}
+
+ul li {
+    list-style-type: none;
+    position: relative;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    padding: 1rem 1rem 1rem 3rem;
+    border-radius: 1.5rem;
+    user-select: none;
+    cursor: pointer;
+    color: #fcf9c6;
+    background-color: #6e1586;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-wrap: break-word;
+    transition: all 400ms ease;
+    white-space: pre-wrap;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    border: 2px solid #fcf9c6;
+    border-radius: 50%;
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    transition: all 400ms ease;
+}
+
+ul li.checked {
+    color: #290333;
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #290333;
+    transition: all 400ms ease;
+}
+
+ul li.checked::before {
+    background-image: url(./Check-Icon.svg);
+    background-color: #290333;
+    transition: all 400ms ease;
+}   
+
+ul li img {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 5px;
+    border: 2px solid #fcf9c6;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: all 400ms ease;
+    &:hover {
+        background-color: rgb(133, 3, 3);
+    }
+}
+
+textarea::-webkit-scrollbar {
+	width: 0.3rem;
+	background: #6e1586;
+}
+
+textarea::-webkit-scrollbar-track {
+	background: #6e1586;
+	border-radius: 1rem;
+}
+
+textarea::-webkit-scrollbar-track-piece {
+	background: #6e1586;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  	background-color: #fcf9c6;
+  	border-radius: 1rem;
+}
